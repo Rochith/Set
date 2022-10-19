@@ -1,0 +1,10 @@
+name: testing                                                                                                                                                 
+    on:
+      pull_request:
+        branches:
+          - develop
+        paths:
+          - 'dir_1/**'
+          - '!dir_1/README.md'
+          - 'dir_2/**'
+          - '!dir_2/README.md'
