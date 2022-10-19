@@ -1,7 +1,7 @@
 // Octokit.js
 // https://github.com/octokit/core.js#readme
 const octokit = new Octokit({
-  auth: 'YOUR-TOKEN'
+  auth: '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'
 })
 
 await octokit.request('PUT /repos/{owner}/{repo}/branches/{branch}/protection', {
