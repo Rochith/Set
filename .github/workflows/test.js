@@ -7,7 +7,7 @@ const octokit = new Octokit({
 await octokit.request('PUT /repos/{owner}/{repo}/branches/{branch}/protection', {
   owner: 'rochith',
   repo: '*',
-  branch: 'main',
+  branch: '*',
   required_status_checks: {
     strict: true,
     contexts: [
@@ -21,7 +21,7 @@ await octokit.request('PUT /repos/{owner}/{repo}/branches/{branch}/protection', 
         'octocat'
       ],
       teams: [
-        'justice-league'
+        '*'
       ]
     },
     dismiss_stale_reviews: true,
@@ -29,19 +29,19 @@ await octokit.request('PUT /repos/{owner}/{repo}/branches/{branch}/protection', 
     required_approving_review_count: 2,
     bypass_pull_request_allowances: {
       users: [
-        'rochith'
+        '*'
       ],
       teams: [
-        'justice-league'
+        '*'
       ]
     }
   },
   restrictions: {
     users: [
-      'rochith'
+      '*'
     ],
     teams: [
-      'justice-league'
+      '*'
     ],
     apps: [
       'super-ci'
